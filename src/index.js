@@ -9,11 +9,16 @@ import dotenv from 'dotenv';
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: 'https://accredian-frontend-task-eight-iota.vercel.app/', 
-  methods: ['GET', 'POST'], 
-  allowedHeaders: ['Content-Type'],
-}));
+const corsOptions = {
+  origin: [
+    'http://localhost:3000', // For local development
+    'https://accredian-frontend-task-eight-iota.vercel.app',
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
