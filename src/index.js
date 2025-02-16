@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: 'https://accredian-frontend-task-eight-iota.vercel.app/', 
   methods: ['GET', 'POST'], 
   allowedHeaders: ['Content-Type'],
 }));
