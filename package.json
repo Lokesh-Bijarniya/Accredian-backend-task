@@ -2,12 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
+  "type":"module",
   "scripts": {
-    "start": "npx nodemon src/index.js",
-    "start:prod": "node src/index.js",
-    "build": "echo 'No build step defined'",
-    "prisma": "prisma generate"
+    "start":"npx nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
