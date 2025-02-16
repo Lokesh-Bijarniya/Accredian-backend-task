@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "prestart": "npx prisma generate",
+    "prestart": "npx prisma generate --schema=src/prisma/schema.prisma",
     "start": "npx nodemon src/index.js",
     "start:prod": "node src/index.js"
   },
